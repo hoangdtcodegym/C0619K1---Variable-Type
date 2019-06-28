@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CurrencyTransfer</title>
+</head>
+<body>
+    <form name = "myForm">
+        <table border="0" width="50%">
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td align="center"><input type = "number", id = "amount"></td>
+
+            <td align="center"><select id = "fromCurrency" required>
+                     <option value = "VND">VND</option>
+                     <option value = "USD">USD</option>
+                    <option value = "EUR">EUR</option>
+            </select></td>
+
+            <td align="center"><select id = "toCurrency" required>
+                <option value = "VND">VND</option>
+                <option value = "USD">USD</option>
+                <option value = "EUR">EUR</option>
+            </select></td>
+                <td align="center"><button class="btn calculate-btn btn-primary mb-2", style="background: DodgerBlue;">Result</button></td>
+            </tr>
+        </table>
+    </form>
+    <div class="result">
+            <span class="given-amount"></span>
+            <span class="base-currency"></span>
+            <span class="final-result"></span>
+            <span class="second-currency"></span>
+    </div>
+</body>
+<script>
+    let crrncy = {'VND': {'USD': 1/23, 'EUR': 1/25}, 'USD': {'VND': 23, 'EUR': 25 }, 'EUR':{'VND': 25, 'USD': 25/23}};
+
+    let btn = document.querySelector('.calculate-btn');
+    let total = document.getElementById("amount");
+    let baseCurrency = document.getElementById("fromCurrency");
+    let secondCurrency = document.getElementById("toCurrency");
+
+    let toShowAmount = document.querySelector('.given-amount');
+    let toShowBase = document.querySelector('.base-currency');
+    let toShowSecond = document.querySelector('.second-currency');
+    let toShowResult = document.querySelector('.final-result');
+
+    function convertCurrency(notDefault) {
+        notDefault.preventDefault();
+        let amount = total.value;
+        let from = baseCurrency.value;
+        let to = secondCurrency.value;
+        let result = 0;
+
+        if (from === to){
+            result = amount;
+        }
+        else{
+                result = amount*crrncy[from][to]
+        }
+
+        toShowAmount.innerHTML = amount;
+        toShowBase.textContent = from + ' = ';
+        toShowSecond.textContent = to;
+        toShowResult.textContent = result;
+    }
+
+    btn.addEventListener('click', convertCurrency);
+
+</script>
+</html>

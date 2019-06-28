@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaculateAverage</title>
+</head>
+<body>
+<script>
+    let inputVatLy;
+    let inputHoaHoc;
+    let inputSinhHoc;
+
+    inputVatLy = prompt("Enter the score of physic");
+    inputHoaHoc = prompt("Enter the score chemistry");
+    inputSinhHoc = prompt("Enter the score biology");
+
+    let vatly;
+    let hoaHoc;
+    let sinhHoc;
+
+    vatly = parseInt(inputVatLy);
+    hoaHoc = parseInt(inputHoaHoc);
+    sinhHoc = parseInt(inputSinhHoc);
+
+    let average;
+
+    average = (vatly + hoaHoc + sinhHoc)/3;
+
+    document.write("Average score = " + average);
+
+</script>
+</body>
+</html>
