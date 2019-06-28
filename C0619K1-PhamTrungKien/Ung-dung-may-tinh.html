@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input id="so1" type="number"/>
+    <input id="so2" type="number"/>
+    <br/>
+    <button type="button" onclick="addition()">Addition(+)</button>
+    <button type="button" onclick="subtraction()">Subtraction(-)</button>
+    <button type="button" onclick="multiplication()">Multiplication(*)</button>
+    <button type="button" onclick="division()">Division(/)</button>
+    <br/>
+    <div id="result"></div>
+
+    <script>
+        let a = document.getElementById("so1");
+        let b = document.getElementById("so2");
+        function addition() {
+            let cong = Number(a.value) + Number(b.value);
+            document.getElementById("result").innerHTML = "Result Addition: " + cong;
+        }
+
+        function subtraction() {
+            let tru = Number(a.value) - Number(b.value);
+            document.getElementById("result").innerHTML = "Result Subtraction: " + tru;
+        }
+
+        function multiplication() {
+            let nhan = Number(a.value) * Number(b.value);
+            document.getElementById("result").innerHTML = "Result Multiplication: " + nhan;
+        }
+
+        function division() {
+            let chia = Number(a.value) / Number(b.value);
+            document.getElementById("result").innerHTML = "Result Division: " + chia;
+        }
+    </script>
+
+</body>
+</html>

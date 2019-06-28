@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính điểm trung bình</title>
+</head>
+<body>
+    <script>
+        let vl = prompt("Nhập điểm Vật lý",'');
+        let hh = prompt("Nhập điểm Hóa học",'');
+        let sh = prompt("Nhập điểm Sinh học", '');
+
+        let a = Number(vl);
+        let b = Number(hh);
+        let c = Number(sh);
+
+        let tong = a + b + c;
+        let trungBinh = tong/3;
+
+        document.write("Tổng điểm là: " + tong + " điểm" + "<br>");
+        document.write("Điểm trung bình là: " + trungBinh + " điểm");
+    </script>
+</body>
+</html>
