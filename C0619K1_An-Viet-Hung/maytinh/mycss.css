@@ -1,0 +1,20 @@
+#wrapper{
+    width: 211px;
+    margin: 0 auto;
+}
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+input{
+    width: 50px;
+    height: 25px;
+}
+#display{
+    width: 211px;
+    height: 25px;
+    border: 1px inset black;
+}

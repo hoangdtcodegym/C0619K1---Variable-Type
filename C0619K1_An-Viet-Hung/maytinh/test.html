@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form name="caculator" >
+    <input type="text" id="show" placeholder="0">
+    <br>
+    <input type="button" id="btn9" name="btn9" value="9" onclick="showMe(this.value)">
+    <input type="button" id="btn8" name="btn8" value="8" onclick="showMe(this.value)">
+    <input type="button" id="btn7" name="btn7" value="7" onclick="showMe(this.value)">
+    <input type="button" id="btnAdd" name="btnAddition" value="+" onclick="showMe(this.value)">
+    <br>
+    <input type="button" id="btn6" name="btn6" value="6" onclick="showMe(this.value)">
+    <input type="button" id="btn5" name="btn5" value="5" onclick="showMe(this.value)">
+    <input type="button" id="btn4" name="btn4" value="4" onclick="showMe(this.value)">
+    <input type="button" id="btnSub" name="btnSubtraction" value="-" onclick="showMe(this.value)">
+    <br>
+    <input type="button" id="btn3" name="btn3" value="3" onclick="showMe(this.value)">
+    <input type="button" id="btn2" name="btn2" value="2" onclick="showMe(this.value)">
+    <input type="button" id="btn1" name="btn1" value="1" onclick="showMe(this.value)">
+    <input type="button" id="btnMul" name="btnMultipliCation" value="*" onclick="showMe(this.value)">
+    <br>
+    <input type="button" id="btn0" name="btn0" value="0" onclick="showMe(this.value)">
+    <input type="button" id="btnDot" name="btnDot" value="." onclick="showMe(this.value)">
+    <!--eval: thuc hien bieu thuc toan hoc hoac thuc thi ma lenh tuy thuoc vao tham so truyen vao-->
+    <input type="button" id="btnEql" name="btnEql" value="=" onclick="show.value=eval(show.value)">
+    <input type="button" id="btnDiv" name="btnDivsion" value="/" onclick="showMe(this.value)    ">
+    <br>
+    <button type="reset" id="btnReset" name="btnReset">EC</button>
+</form>
+<script>
+    function showMe(n) {
+        caculator.show.value = caculator.show.value + n;
+    }
+</script>
+</body>
+</html>
