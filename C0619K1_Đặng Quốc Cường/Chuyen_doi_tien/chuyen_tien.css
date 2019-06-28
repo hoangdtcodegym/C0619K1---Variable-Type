@@ -1,0 +1,31 @@
+td {
+    width: 500px;
+    position: relative;
+    left: 100px;
+}
+
+h4 {
+    padding-left: 50px;
+    margin: auto;
+}
+
+select {
+    padding-left: 40px;
+    width: 150px;
+    margin-left: 40px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+#to_currency {
+    width: 30px;
+}
+
+form {
+    width: 500px;
+    height: 1000px;
+}

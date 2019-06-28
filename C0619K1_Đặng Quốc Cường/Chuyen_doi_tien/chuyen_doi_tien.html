@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="chuyen_tien.css">
+    <script type="text/javascript" src="chuyen_tien.js"></script>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td>
+                <h4>Amount</h4>
+                <input type="text" id="input" placeholder="Mời bạn nhập số tiền">
+            </td>
+            <td>
+                <h4>From Currency</h4>
+                <select id="1">
+                    <option value="VNĐ">VNĐ</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td id="to_currency">
+                <h4>To Currency</h4>
+                <select id="2">
+                    <option value="USD">USD</option>
+                    <option value="VNĐ">VNĐ</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="chuyen_doi()">Corver</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
