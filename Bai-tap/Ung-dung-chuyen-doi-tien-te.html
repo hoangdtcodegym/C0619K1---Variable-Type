@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <p><strong>Amount</strong></p>
+    <input type="number" id="amount" />
+
+    <p><strong>From Currency</strong></p>
+    <select id="fromCurrency">
+        <option value="23000">VND</option>
+        <option  value="1">USD</option>
+    </select>
+
+    <p><strong>To Currency</strong></p>
+    <select id="toCurrency">
+        <option value="23000">VND</option>
+        <option value="1">USD</option>
+    </select>
+    <br/>
+
+    <button type="button" onclick="changeMoney()">Convert</button>
+
+    <div id="ketqua"></div>
+
+    <script type="text/javascript">
+        /*function getAmount() {
+            let amount = Number(document.getElementById("amount").value);
+        }*/
+
+        function changeMoney() {
+            let amount = Number(document.getElementById("amount").value);
+
+            let a = Number(document.getElementById("fromCurrency").value);
+            let b = Number(document.getElementById("toCurrency").value);
+                console.log(a);
+                console.log(b);
+
+            let vnd = amount * 23000
+            let usd = amount / 23000
+
+            if (a === b) {
+                alert("chọn loại tiền tệ khác nhau để quy đổi");
+            } else {
+                    if ( a === 1 && b === 23000) {
+                        //document.write(vnd + " đồng");
+                        document.getElementById("ketqua").innerHTML = vnd + " đồng";
+                    } else {
+                        //document.write(usd + " đô");
+                        document.getElementById("ketqua").innerHTML = usd + " đồng";
+                    }
+            };
+        }
+    </script>
+</body>
+</html>
