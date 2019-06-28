@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+
+<style>
+    .btn {
+        higth: 30px;
+        width: 30px;
+    }
+
+    #ketQua {
+        higth: 30px;
+        width: 128px;
+    }
+
+</style>
+
+<body>
+<div>
+
+    <input id="ketQua" type="text" value=""/>
+    <br/>
+    <input class="btn" type="button" value="1" onclick="result.value+=this.value"/>
+    <input class="btn" type="button" value="2" onclick="result.value+=this.value"/>
+    <input class="btn" type="button" value="3" onclick="result.value+=this.value"/>
+    <input class="btn" type="button" value="/" onclick="result.value+=this.value"/>
+    <br/>
+    <input class="btn" type="button" value="4" onclick="result.value+=this.value"/>
+    <input class="btn" type="button" value="5" onclick="result.value+=this.value"/>
+    <input class="btn" type="button" value="6" onclick="result.value+=this.value"/>
+    <input class="btn" type="button" value="*" onclick="result.value+=this.value"/>
+    <br/>
+    <input class="btn" type="button" value="7" onclick="result.value+=this.value"/>
+    <input class="btn" type="button" value="8" onclick="result.value+=this.value"/>
+    <input class="btn" type="button" value="9" onclick="result.value+=this.value"/>
+    <input class="btn" type="button" value="-" onclick="result.value+=this.value"/>
+    <br/>
+    <input class="btn" type="button" value="AC" onclick="result.value+=this.value"/>
+    <input class="btn" type="button" value="C" onclick="result.value+=this.value"/>
+    <input class="btn" type="button" value="=" onclick="display.value=eval(display.value"/>
+    <input class="btn" type="button" value="+" onclick="result.value+=this.value"/>
+    <br/>
+
+</div>
+<script>
+    let result = document.getElementById("ketQua");
+    function () {
+        
+    }
+</script>
+</body>
+</html>
