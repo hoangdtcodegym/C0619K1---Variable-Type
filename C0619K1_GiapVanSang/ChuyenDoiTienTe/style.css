@@ -1,0 +1,32 @@
+body{
+
+}
+#doan1{
+    width: 240px;
+    float: left;
+}
+#doan2{
+    width: 240px;
+    float:left
+}
+#doan3{
+    width: 240px;
+    float: left;
+}
+#doan4{
+    width: 100px;
+    float:left;
+}
+#doan4 button{
+    width: 150px;
+    width: 150px;
+    margin-top:30px;
+    background-color:cornflowerblue;
+}
+p{
+    font-weight: bold;
+    color: blue;
+}
+#clear{
+    clear:left;
+}
