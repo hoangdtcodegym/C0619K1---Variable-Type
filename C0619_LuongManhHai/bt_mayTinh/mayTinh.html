@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        button {
+            width: 100px;
+            height: 50px;
+        }
+        input{
+            width: 99%;
+            height: 70px;
+            margin: auto;
+
+        }
+        div{
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+<form name="calculator">
+
+<div>
+    <table style="100%">
+        <tr>
+            <td colspan="4"> <input id="in" type="text" name="show" readonly> </td>
+        </tr>
+        <tr>
+            <td><button type="button" value="(" onclick="display(this.value)">(</button></td>
+            <td><button type="button" value=")" onclick="display(this.value)">)</button></td>
+            <td><button type="button" value="%" onclick="display(this.value)">%</button></td>
+            <td><button type="reset">AC</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" value="7" onclick="display(this.value)">7</button></td>
+            <td><button type="button" value="8" onclick="display(this.value)">8</button></td>
+            <td><button type="button" value="9" onclick="display(this.value)">9</button></td>
+            <td><button type="button" value="/" onclick="display(this.value)">/</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" value="4" onclick="display(this.value)">4</button></td>
+            <td><button type="button" value="5" onclick="display(this.value)">5</button></td>
+            <td><button type="button" value="6" onclick="display(this.value)">6</button></td>
+            <td><button type="button" value="*" onclick="display(this.value)">X</button></td>
+        </tr>
+        <tr>
+            <td><button id ="so1" type="button" value="1" onclick="display(document.getElementById('so1').value)">1</button></td>
+            <td><button type="button" value="2" onclick="display(this.value)">2</button></td>
+            <td><button type="button" value="3" onclick="display(this.value)">3</button></td>
+            <td><button type="button" value="-" onclick="display(this.value)">-</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" value="0" onclick="display(this.value)">0</button></td>
+            <td><button type="button" value="." onclick="display(this.value)">.</button></td>
+            <td><button type="button" onclick= "show.value = eval(show.value)">=</button></td>
+            <td><button type="button" value="+" onclick="display(this.value)">+</button></td>
+        </tr>
+
+    </table>
+</div>
+</form>
+
+<script>
+    
+    function display(i) {
+       // calculator.show.value = calculator.show.value + i;
+
+        document.getElementById('in').value  = document.getElementById('in').value +i;
+    }
+    
+    
+</script>
+
+
+
+</body>
+</html>
