@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Amount:
+    <input type="number" name ="Amount" id = "money" > <br><br>
+    From Currency:
+    <select id = "select1">
+        <option value="23000">vie</option>
+        <option value="1">usd</option>
+        <option value="27000">eur</option>
+    </select>
+    To Currency:
+
+    <select id = "select2">
+        <option value="1">vie</option>
+        <option value="23000">usd</option>
+        <option value="27000">eur</option>
+    </select>
+
+    <input type="submit" value="Convert" onclick="get();">
+</form>
+<div id = "display" class="display" >result will appear here </div>
+<script>
+    let e;
+       let a = document.getElementById("money").value;
+       let b = document.getElementById("select1").value;
+       let c = document.getElementById("select2").value;
+
+       d = a*b/c;
+       if ( c==1 ){
+           e = "vnd";
+       }
+       if ( c ==23000  ) {
+           e == "usd"
+       }
+       if (c == 27000 ){
+           e ="eur"
+       }
+       if (a == 0 ){
+           document.getElementById("display").innerHTML = 'insert the number';
+
+       }
+       else {
+           document.getElementById("display").innerHTML = 'result = ' + d + e;
+       }
+
+</script>
+</body>
+</html>
