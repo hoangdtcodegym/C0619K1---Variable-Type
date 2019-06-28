@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td>
+                <b>
+                    Amount
+                </b>
+            </td>
+            <td>
+                <b>
+                    From Currency
+                </b>
+            </td>
+            <td>
+                <b>
+                    To Currency
+                </b>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <input type="number" id="nhapSotien"/>
+            </td>
+            <td>
+                <select id="loaitien1">
+                    <option value="2">VNĐ</option>
+                    <option value="1" >USA</option>
+
+                </select>
+            </td>
+            <td>
+                <select id="loaitien2">
+                    <option value="1">USA</option>
+                    <option value="2">VNĐ</option>
+
+                </select>
+            </td>
+            <Td>
+                <button type="button" onclick="ketquala()">Covert</button>
+            </Td>
+        </tr>
+    </table>
+</form>
+<div id="ketqua1"></div>
+<script>
+    function ketquala() {
+        let sotien = Number(document.getElementById('nhapSotien').value);
+        let loaitien1 = Number(document.getElementById('loaitien1').value);
+        let loaitien2 = Number(document.getElementById('loaitien2').value);
+        let ketqua;
+        // ketqua=sotien*loaitien2/loaitien1;
+        // console.log(loaitien1+"/"+loaitien2);
+        if ( loaitien1 == loaitien2 ){
+            ketqua=sotien;
+        } else {
+            if ( loaitien1 == 2 && loaitien2 == 1 ){
+             ketqua= sotien/23000;
+            } else {
+                ketqua= 23000 * sotien;
+            }
+
+        }
+        document.getElementById('ketqua1').innerHTML = 'ketquala: ' + ketqua;
+    }
+</script>
+</body>
+</html>
