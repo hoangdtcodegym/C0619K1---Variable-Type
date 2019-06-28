@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<body>
+<input type="text" id="sothu1"/>
+<input type="text" id="sothu2"/>
+<br>
+<!--<button id="cong" value="cong" onclick="cong();">Addtion(+)</button>-->
+<!--<button id="tru" value="tru" onclick="tru();">Subtraction(-)</button>-->
+<!--<button id="nhan" value="nhan" onclick="nhan();">Multiplicaltion(x)</button>-->
+<!--<button id="chia" value="chia" onclick="chia();">Division(/)</button>-->
+<button onclick="tinhtoan('+');">Addtion(+)</button>
+<button onclick="tinhtoan('-');">Subtraction(-)</button>
+<button onclick="tinhtoan('*');">Multiplicaltion(x)</button>
+<button onclick="tinhtoan('/');">Division(/)</button>
+
+
+<script>
+    // function cong() {
+    //     let sothu1 = Number(document.getElementById("sothu1").value);
+    //     let sothu2 = Number(document.getElementById("sothu2").value);
+    //     result = sothu1 + sothu2;
+    //     alert(result);
+    // }
+    // function tru() {
+    //     let sothu1 = Number(document.getElementById("sothu1").value);
+    //     let sothu2 = Number(document.getElementById("sothu2").value);
+    //     result = sothu1 - sothu2;
+    //     alert(result);
+    // }
+    // function nhan() {
+    //     let sothu1 = Number(document.getElementById("sothu1").value);
+    //     let sothu2 = Number(document.getElementById("sothu2").value);
+    //     result = sothu1 * sothu2;
+    //     alert(result);
+    // }
+    // function chia() {
+    //     let sothu1 = Number(document.getElementById("sothu1").value);
+    //     let sothu2 = Number(document.getElementById("sothu2").value);
+    //     result = sothu1 / sothu2;
+    //     alert(result);
+    // }
+    function tinhtoan(tinh) {
+        let sothu1 = Number(document.getElementById("sothu1").value);
+        let sothu2 = Number(document.getElementById("sothu2").value);
+        let result1;
+        switch (tinh) {
+            case "+":
+                result1 = sothu1 + sothu2;
+                break
+            case "-":
+                result1 = sothu1 - sothu2;
+                break
+            case "*":
+                result1 = sothu1 * sothu2;
+                break
+            case "/":
+                result1 = sothu1 / sothu2;
+                break
+        }
+        alert(result1);
+    }
+</script>
+</body>
+</html>
