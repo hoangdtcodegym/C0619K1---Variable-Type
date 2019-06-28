@@ -1,0 +1,19 @@
+body{
+    font-family: arial;
+    font-size: 16px;
+    padding: 200px 0px 0px 200px;
+    color: aliceblue;
+}
+.clear_all{
+    clear: both;
+}
+.button{
+    margin: 0px 15px 15px 0px;
+    padding: 10px 10px 10px 10px;
+    float:left;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #cccccc;
+    background-color: #666666;
+    width: 30px;
+}

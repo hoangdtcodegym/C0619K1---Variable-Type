@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi Tiền Tệ</title>
+    <script src="my-javascript.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+<div id="doan1">
+    <p>Amount</p>
+    <input type="text" id="sotien"/>
+</div>
+<div id="doan2">
+    <p>From Currency</p>
+    <select id="from">
+        <option value="23000">Viet Nam</option>
+        <option value="1">USD</option>
+        <option value="0.85">BangAnh</option>
+    </select>
+</div>
+<div id="doan3">
+    <p>To Currency</p>
+    <select id="to">
+        <option value="1">USD</option>
+        <option value="23000">VietNam</option>
+        <option value="0.85">BangAnh</option>
+    </select>
+</div>
+    <div id="doan4">
+        <p></p>
+        <button type="button" onclick="convert()">Convert</button>
+    </div>
+</div>
+<div id="clear"></div>
+<p id="result"></p>
+</body>
+</html>
