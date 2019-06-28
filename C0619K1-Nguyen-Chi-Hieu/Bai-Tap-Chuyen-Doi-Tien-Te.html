@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        h1{
+            font-size: medium;
+            font-weight: bold;
+            color: blue;
+        }
+        button{
+            font-size: 20px;
+            font-weight: bold;
+            color: coral;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table border="0" width="800px">
+            <tr>
+                <th align="center">Amount</th>
+                <th align="center">From Currency</th>
+                <th align="center">To Currency</th>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="center"><input id="InputNum"></td>
+                <td align="center">
+                    <select id="FromCur">
+                        <option>VND</option>
+                        <option>USD</option>
+                        <option>JPY</option>
+                    </select>
+                </td>
+                <td align="center">
+                    <select id="ToCur">
+                        <option>VND</option>
+                        <option>USD</option>
+                        <option>JPY</option>
+                    </select>
+                </td>
+                <td align="center"><button type="button" onclick="convert();">Convert</button></td>
+            </tr>
+            <tr>
+                <td colspan="4"><h1 id="Result">Result :</h1></td>
+            </tr>
+        </table>
+        <script>
+            function convert() {
+                let CurNum = document.getElementById("InputNum").value;
+
+                if(document.getElementById("FromCur").value == "VND"){
+                    switch (document.getElementById("ToCur").value) {
+                        case "VND" :
+                            break;
+                        case "USD" :
+                            CurNum = CurNum / 23000;
+                            break;
+                        case "JPY" :
+                            CurNum = CurNum / 213;
+                            break;
+                    }
+                }
+                else if(document.getElementById("FromCur").value == "USD"){
+                    switch (document.getElementById("ToCur").value) {
+                        case "VND" :
+                            CurNum = CurNum * 23000;
+                            break;
+                        case "USD" :
+                            break;
+                        case "JPY" :
+                            CurNum = CurNum * 108;
+                            break;
+                    }
+                }
+                else if(document.getElementById("FromCur").value == "JPY"){
+                    switch (document.getElementById("ToCur").value) {
+                        case "VND" :
+                            CurNum = CurNum * 213;
+                            break;
+                        case "USD" :
+                            CurNum = CurNum / 108;
+                            break;
+                        case "JPY" :
+                            break;
+                    }
+                }
+                document.getElementById("Result").innerHTML = "Result : " + CurNum + " " + document.getElementById("ToCur").value;
+            }
+        </script>
+    </form>
+</body>
+</html>
