@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="soa"/>
+<input type="text" id="sob"/>
+<br>
+<!--<button id="cong" value="cong" onclick="cong();">Addtion(+)</button>-->
+<!--<button id="tru" value="tru" onclick="tru();">Subtraction(-)</button>-->
+<!--<button id="nhan" value="nhan" onclick="nhan();">Multiplicaltion(x)</button>-->
+<!--<button id="chia" value="chia" onclick="chia();">Division(/)</button>-->
+<button onclick="tinhtoan('+');">Addtion(+)</button>
+<button onclick="tinhtoan('-');">Subtraction(-)</button>
+<button onclick="tinhtoan('*');">Multiplicaltion(x)</button>
+<button onclick="tinhtoan('/');">Division(/)</button>
+
+
+<script>
+    // function cong() {
+    //     let soa = Number(document.getElementById("soa").value);
+    //     let sob = Number(document.getElementById("sob").value);
+    //     result = soa + sob;
+    //     alert(result);
+    // }
+    // function tru() {
+    //     let soa = Number(document.getElementById("soa").value);
+    //     let sob = Number(document.getElementById("sob").value);
+    //     result = soa - sob;
+    //     alert(result);
+    // }
+    // function nhan() {
+    //     let soa = Number(document.getElementById("soa").value);
+    //     let sob = Number(document.getElementById("sob").value);
+    //     result = soa* sob;
+    //     alert(result);
+    // }
+    // function chia() {
+    //     let soa = Number(document.getElementById("soa").value);
+    //     let sob = Number(document.getElementById("sob").value);
+    //     result = soa / sob;
+    //     alert(result);
+    // }
+    function tinhtoan(tinh) {
+        let soa= Number(document.getElementById("soa").value);
+        let sob= Number(document.getElementById("sob").value);
+        let result1;
+        switch (tinh) {
+            case "+":
+                result1 = soa+ sob
+                break
+            case "-":
+                result1 = soa- sob
+                break
+            case "*":
+                result1 = soa* sob
+                break
+            case "/":
+                result1 = soa/ sob
+                break
+        }
+        alert(result1);
+    }
+</script>
+</body>
+</html>

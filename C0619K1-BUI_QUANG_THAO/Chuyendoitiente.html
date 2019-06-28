@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Amout
+    <input type="text" id="Amount"/>
+    From Currency
+    <select id="FromC"/>
+        <option value="vnd">VND</option>
+        <option value="usd">USD</option>
+    </select>
+    To Currency
+    <select id="ToC"/>
+        <option value="usd">USD</option>
+        <option value="vnd">VND</option>
+    </select>
+    <button type="button" onclick="showMessage();">Exchange</button>
+    <br>
+    Result: <span id="Result"></span>
+</form>
+<script>
+    function showMessage() {
+        let a1 = document.getElementById("Amount").value;
+        let FromC = document.getElementById("FromC").value;
+        let ToC = document.getElementById("ToC").value;
+        let Result;
+        if (FromC == "vnd" && ToC == "usd") {
+            Result = a1 / 23000;
+            document.getElementById("Result").innerHTML = Result;
+            //document.write("Result = " + Result);
+        }
+        if (FromC == "usd" && ToC == "vnd") {
+            Result = a1 * 23000;
+            document.getElementById("Result").innerHTML = Result;
+            //document.write("Result = " + Result);
+        }
+
+    }
+</script>
+</body>
+</html>
