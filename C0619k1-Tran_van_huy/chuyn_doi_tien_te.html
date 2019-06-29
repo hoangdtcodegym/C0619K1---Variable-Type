@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+<table>
+    <tr>
+        <td>
+            <b> Amount </b> <br/>
+            <input type = "number" id="amount" />
+        </td>
+        <td>
+            <b> From Currency</b> <br/>
+            <select id="from">
+                <option value="23000"> VND </option>
+                <option value="1"> USD </option>
+            </select>
+        </td>
+        <td>
+            <b> To Currency </b> <br/>
+            <select id="to">
+                <option value="23000"> VND </option>
+                <option value="1"> USD </option>
+            </select>
+        </td>
+        <td>
+            <button type="button" onclick="convert();">Convert</button>
+        </td>
+    </tr>
+</table>
+</form>
+<br/>
+<span id="ketqua"> </span>
+<script>
+    function convert() {
+        let amount = document.getElementById('amount').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+        let result = (amount * to) / from;
+        document.getElementById('ketqua').innerHTML= 'Result :' + result;
+    }
+</script>
+</body>
+</html>

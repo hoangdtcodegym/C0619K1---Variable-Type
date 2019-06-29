@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ung dung may tinh</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td><input type="number" id="num1"/></td>
+            <td><input type="number" id="num2"/></td>
+        </tr>
+    </table>
+    <table>
+        <!--            <tr><button id='add' value='+' type="button" onclick="addition();">Addition(+)</button> </tr>-->
+        <!--            <tr><button type="button" onclick="subtraction()">Subtraction(-)</button> </tr>-->
+        <!--            <tr><button type="button" onclick="multiplication()">Multiplication(x)</button> </tr>-->
+        <!--            <tr><button type="button" onclick="division()">Division(/)</button> </tr>-->
+        <tr>
+            <button type="button" onclick="tinhtoan('+');">Addition(+)</button>
+        </tr>
+        <tr>
+            <button type="button" onclick="tinhtoan('-')">Subtraction(-)</button>
+        </tr>
+        <tr>
+            <button type="button" onclick="tinhtoan('x')">Multiplication(x)</button>
+        </tr>
+        <tr>
+            <button type="button" onclick="tinhtoan('/')">Division(/)</button>
+        </tr>
+    </table>
+</form>
+<span id="ketqua"></span>
+<script>
+    /*function addition() {
+        let num1 = Number(document.getElementById('num1').value);
+        let num2 = Number(document.getElementById('num2').value);
+        let result = num1 + num2;
+        document.getElementById('ketqua').innerHTML="Result Addition: " + result;
+    }
+    function subtraction() {
+        let num1 = Number(document.getElementById('num1').value);
+        let num2 = Number(document.getElementById('num2').value);
+        let result = num1 - num2;
+        document.getElementById('ketqua').innerHTML="Result Subtraction: " + result;
+    }
+    function multiplication() {
+        let num1 = Number(document.getElementById('num1').value);
+        let num2 = Number(document.getElementById('num2').value);
+        let result = num1 * num2;
+        document.getElementById('ketqua').innerHTML="Result Multiplication: " + result;
+    }
+    function division() {
+        let num1 = Number(document.getElementById('num1').value);
+        let num2 = Number(document.getElementById('num2').value);
+        let result = num1 / num2;
+        document.getElementById('ketqua').innerHTML="Result Division: " + result;
+    }*/
+    function tinhtoan(pheptinh) {
+        let num1 = Number(document.getElementById('num1').value);
+        let num2 = Number(document.getElementById('num2').value);
+        let result;
+        switch (pheptinh) {
+            case "+":
+                result = num1 + num2;
+                break;
+            case "-":
+                result = num1 - num2;
+                break;
+            case "x":
+                result = num1 * num2;
+                break;
+            case "/":
+                result = num1 / num2;
+                break;
+        }
+        document.getElementById('ketqua').innerHTML="Result : " + result;
+    }
+</script>
+</body>
+</html>
