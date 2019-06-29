@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh</title>
+
+</head>
+<body>
+<form>
+    <input type="text" id="input" disabled/> <br>
+
+
+    <input type="button" value="(" onclick="inputValue('(')" />
+    <input type="button" value=")" onclick="inputValue(')')" />
+    <input type="button" value="%" onclick="inputValue('%')" />
+    <input type="reset" value="AC" />
+    <br>
+
+    <input type="button" value="7" onclick="inputValue('7')" />
+    <input type="button" value="8" onclick="inputValue('8')" />
+    <input type="button" value="8" onclick="inputValue('9')" />
+    <input type="button" value="/" onclick="inputValue('/')" />
+
+    <br>
+
+    <input type="button" value="4" onclick="inputValue('4')" />
+    <input type="button" value="5" onclick="inputValue('5')" />
+    <input type="button" value="6" onclick="inputValue('6')" />
+    <input type="button" value="*" onclick="inputValue('*')" />
+    <br>
+
+    <input type="button" value="1" onclick="inputValue('1')" />
+    <input type="button" value="2" onclick="inputValue('2')" />
+    <input type="button" value="3" onclick="inputValue('3')" />
+    <input type="button" value="-" onclick="inputValue('-')" />
+    <br>
+
+    <input type="button" value="0" onclick="inputValue('0')" />
+    <input type="button" value="." onclick="inputValue('.')" />
+    <input type="button" value="=" onclick="input.value = eval(input.value)" />
+    <input type="button" value="+" onclick="inputValue('+')" />
+
+</form>
+<script>
+    function inputValue(value) {
+        input.value += value;
+    }
+</script>
+</body>
+</html>
