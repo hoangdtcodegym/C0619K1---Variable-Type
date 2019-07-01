@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1 session 2</title>
+</head>
+<body>
+<!-- Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học.
+        Sau đó hiển thị điểm trung bình và tổng của những điểm này.      -->
+    <script>
+        function diem_tb_va_tong() {
+            //lưu gí trị người dùng nhập vào
+            let physical = parseInt(prompt('text your number physical:'));
+            let chemistry = parseInt(prompt('text your number chemistry:'));
+            let biological = parseInt(prompt('text your number biological:'));
+            //công thức tính điểm tb và tính tổng 3 môn
+            let average = (physical + chemistry + biological)/3;
+            let sum = physical + chemistry + biological;
+            //in ra kết điểm tb và tổng điểm 3 môn
+            alert('average 3 subject physical, chemistry, biological :'+ average);
+            alert(' sum 3 subject physical, chemistry, biological :'+ sum);
+
+        }
+        //gọi hàm
+        diem_tb_va_tong();
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

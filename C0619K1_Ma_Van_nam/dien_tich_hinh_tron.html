@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích hình tròn</title>
+</head>
+<body>
+    <script>
+        function S_hinh_tron() {
+            //khai báo pi và lưu giá trị người dùng nhập vào
+            let pi = 3.14;
+            let r = parseFloat(prompt('nhập vào bán kính đường tròn:' ));
+            //công thức tinh diện tích hình tròn
+            let dien_tich = pi * Math.pow(r,2);
+            // in hộp thoại in ra màn hình
+            alert('dien tich hinh tron là' + dien_tich + "cm vuông.");
+
+        }
+        S_hinh_tron();
+    </script>
+
+</body>
+</html>
