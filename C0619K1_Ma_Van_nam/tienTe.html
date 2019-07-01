@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Amount:
+    <input type="number" id="nhapSo">
+    <br>
+    From Currency:
+    <select name="" id="from">
+        <option value="1">USD</option>
+        <option value="23000">VND</option>
+    </select><br>
+    To Currency:
+    <select name="" id="to">
+        <option value="23000">VND</option>
+        <option value="1">USD</option>
+    </select><br>
+    <button onclick="submit()">submmit</button>
+    <script>
+        function submit(){
+            let number = document.getElementById("nhapSo");
+            let FromMoney = document.getElementById("from");
+            let TomonNey = document.getElementById("to");
+            let Sum = parseFloat(number.value) / parseFloat(FromMoney.value )* parseFloat(TomonNey.value);
+            document.write("so tien chuyen doi = " + Sum);
+        }
+
+
+    </script>
+
+
+</body>
+</html>
