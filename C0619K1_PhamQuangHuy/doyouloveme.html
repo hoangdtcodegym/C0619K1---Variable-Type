@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> You Must Love Me</title>
+
+</head>
+<body>
+<h1 style="color: crimson">DO YOU LOVE ME ?</h1>
+<button type="button" onclick="yes()">Yes </button>
+<button type="button" id="ktdno"  onmouseover="no()" style="position:absolute; left: 360px; top:235px">No</button>
+<script>
+function yes() {
+    alert("<3")
+}
+function no() {
+let x = Math.round(Math.random() * window.innerWidth);
+let y = Math.round(Math.random() * window.innerHeight);
+document.getElementById("ktdno").style.left= x + 'px';
+document.getElementById("ktdno").style.top= y + 'px';
+
+}
+</script>
+</body>
+</html>

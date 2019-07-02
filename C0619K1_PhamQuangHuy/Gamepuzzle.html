@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+</head>
+<body>
+<img width="600" height="160" src="ảnh/funny-cat1_part1x1.jpg"  onclick="chuyen()" id="anh" alt="a">
+<br>
+<img width="600" height="160" src="ảnh/funny-cat1_part2x1.jpg"  onclick="chuyen1()" id="anh1" alt="a1">
+<br>
+<img width="600" height="160" src="ảnh/funny-cat1_part3x1.jpg"  onclick="chuyen2()" id="anh2" alt="a2">
+<br>
+<img width="600" height="160" src="ảnh/funny-cat1_part4x1.jpg"  onclick="chuyen3()" id="anh3" alt="a3">
+<br>
+<img width="600" height="160" src="ảnh/funny-cat1_part5x1.jpg"  onclick="chuyen4()" id="anh4" alt="a4">
+<script>
+    function chuyen() {
+        let img1 = document.getElementById("anh");
+        if (img1.alt == "a") {
+            img1.src = "ảnh/monkey_part1x1.jpg";
+            img1.alt = "a2"
+        } else if (img1.alt == "a2") {
+            img1.src = "ảnh/panda_swap_part1x1.jpg";
+            img1.alt = "a3";
+        }
+            else if (img1.alt =="a3"){
+                img1.src = "ảnh/funny-cat1_part1x1.jpg";
+                img1.alt = "a"
+        }
+
+    }
+    function chuyen1() {
+        let img1 = document.getElementById("anh1");
+        if (img1.alt == "a1") {
+            img1.src = "ảnh/monkey_part2x1.jpg";
+            img1.alt = "a12"
+        } else if (img1.alt == "a12") {
+            img1.src = "ảnh/panda_swap_part2x1.jpg";
+            img1.alt = "a13";
+        }
+        else if (img1.alt =="a13"){
+            img1.src = "ảnh/funny-cat1_part2x1.jpg";
+            img1.alt = "a1"
+        }
+
+    }
+    function chuyen2() {
+        let img1 = document.getElementById("anh2");
+        if (img1.alt == "a2") {
+            img1.src = "ảnh/monkey_part3x1.jpg";
+            img1.alt = "a22"
+        } else if (img1.alt == "a22") {
+            img1.src = "ảnh/panda_swap_part3x1.jpg";
+            img1.alt = "a23";
+        }
+        else if (img1.alt =="a23"){
+            img1.src = "ảnh/funny-cat1_part3x1.jpg";
+            img1.alt = "a2"
+        }
+
+    }
+    function chuyen3() {
+        let img1 = document.getElementById("anh3");
+        if (img1.alt == "a3") {
+            img1.src = "ảnh/monkey_part4x1.jpg";
+            img1.alt = "a32"
+        } else if (img1.alt == "a32") {
+            img1.src = "ảnh/panda_swap_part4x1.jpg";
+            img1.alt = "a33";
+        }
+        else if (img1.alt == "a33"){
+            img1.src = "ảnh/funny-cat1_part4x1.jpg";
+            img1.alt = "a3"
+        }
+
+    }
+    function chuyen4() {
+        let img1 = document.getElementById("anh4");
+        if (img1.alt == "a4") {
+            img1.src = "ảnh/monkey_part5x1.jpg";
+            img1.alt = "a42"
+        } else if (img1.alt == "a42") {
+            img1.src = "ảnh/panda_swap_part5x1.jpg";
+            img1.alt = "a43";
+        }
+        else if (img1.alt =="a43"){
+            img1.src = "ảnh/funny-cat1_part5x1.jpg";
+            img1.alt = "a4"
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
