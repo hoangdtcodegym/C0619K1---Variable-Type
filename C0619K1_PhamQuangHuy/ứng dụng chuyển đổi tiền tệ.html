@@ -8,7 +8,7 @@
 
     <form>
     <label>Amount</label><br>
-    <input type= "text"  text="number " value
+    <input type= "text"  text="number " id="tien">
         <label>From Currency</label>
         <select>
             <option>VietNam</option>
@@ -17,12 +17,21 @@
 
         <label>To Currency</label>
         <select>
-            <option>VietNam</option>
-            <option>USD</option>
+            <option id="vao">VietNam</option>
+            <option id="ra">USD</option>
         </select>
 
         <button type="button" onclick =alert(Result)>covent</button>
         <br>
+        <script> function Result() {
+            let vao =parseFloat(document.getElementById("r")).value;
+            let ra = parseFloat(document.getElementById("v")).value;
+            let tien = parseFloat(document.getElementById("tien")).value;
+            let Result = tien * ra /vao
 
+
+}
+        </script>
+    </form>
 </body>
 </html>
