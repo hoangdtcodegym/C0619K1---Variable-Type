@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập với cấu trúc điều kiện </title>
+</head>
+<body>
+<script>
+    let a =parseInt(prompt("nhập cạnh thứ nhất của tam giác "));
+    let b =parseInt(prompt("nhập cạnh thứ hai của tam giác "));
+    let c =parseInt(prompt("nhập cạnh thứ ba của tam giác"));
+    if(a,b,c>0 && a+b>c && b+c>a && a+c>b){
+        alert("đây là ba cạnh của một tam giác ")
+    } else  if (a,b,c <0 ){
+        alert("đây không là ba cạnh của một tam giác ")
+    } else if ( a,b,c>0 && a+b<c  && b+c>a && a+c>b){
+        alert("đây không là ba cạnh của một tam giác ")
+    } else if ( a,b,c>0 && b+c<a && a+b>c && a+c>b){
+        alert("đây không là ba cạnh của một tam giác")
+    } else if (a,b,c>0 && a+c<b  && a+b>c && b+c>a ){
+        alert("đây không là ba cạnh của một tam giác")
+    }else if ( a,b,c>0 && a+b==c  ){
+        alert("đây không là ba cạnh của một tam giác ")
+    } else if ( a,b,c>0  && a+b==c){
+        alert("đây không là ba cạnh của một tam giác")
+    } else if (a,b,c>0 && b+c==a ) {
+        alert("đây không là ba cạnh của một tam giác")
+    }
+</script>
+</body>
+</html>

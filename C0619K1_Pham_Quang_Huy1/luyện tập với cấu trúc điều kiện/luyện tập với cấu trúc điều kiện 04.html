@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập với cấu trúc điều kiện </title>
+</head>
+<body>
+<script>
+    let so1 =parseInt(prompt("nhập số nguyên thứ nhất :"));
+    let so2 = parseInt(prompt("nhập số nguyên thứ hai :"));
+    let so3 = parseInt(prompt("nhập số nguyên thứ ba :"));
+    if (so1<=so2<so3){
+        alert("số nguyên thứ ba là số lớn nhất ")
+    } else if (so2<=so1<so3 ){
+             alert("số nguyên thứ ba là số lớn nhất ")
+    }else if (so1<=so3<so2){
+        alert("số nguyên thứ hai là số lớn nhất")
+
+    }else if (so3<=so1<so2){
+        alert("số nguyên thứ hai là số lớn nhất")
+    }else if (so2<=so3<so1){
+        alert("số nguyên thứ nhất là số lớn nhất ")
+    }else if (so3<=so2<so1){
+        alert("số nguyên thứ nhất là số lớn nhất ")
+    }else { (so1=so2=so3);
+        alert("ba số nguyên bằng nhau")
+
+    }
+</script>
+</body>
+</html>

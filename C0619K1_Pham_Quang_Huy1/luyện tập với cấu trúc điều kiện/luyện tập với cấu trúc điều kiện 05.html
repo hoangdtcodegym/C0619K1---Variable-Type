@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập với cấu trúc điều kiện </title>
+</head>
+<body>
+<script>
+    let kt = parseInt(prompt("nhập điểm trung bình các bài kiểm tra:"));
+    let gk = parseInt(prompt("nhập điểm trung bình từng môn trong kì thi giữa kì "));
+    let ck = parseInt(prompt("nhập điêm trung bình từng môn trong kì thi cuối kì :"));
+  let so = (kt+gk+ck)/3;
+    if (so>=8.5){
+        alert("học lực giỏi")
+    }else if ( so>5 ){
+        alert("học lực khá")
+    }else if (so>=2){
+        alert("học lực yếu")
+    }else {(so<2);
+        alert("học lực kém ")
+    }
+
+</script>
+</body>
+</html>
