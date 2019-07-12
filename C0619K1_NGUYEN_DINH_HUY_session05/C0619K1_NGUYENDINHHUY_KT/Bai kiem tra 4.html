@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai kiem tra 4</title>
+</head>
+<body>
+<script>
+    let m = Math.floor(Math.random()*10);
+    let arr2D = [];
+    for (let i = 0; i<m; i++){
+        let arr1 = Array(m).fill().map(function () {return Math.floor(Math.random()*10)});
+        arr2D.push(arr1);
+    }
+    document.writeln("mảng đầu vào là: a = " + "[" + arr2D + "]");
+    function reverseArray(srcArray) {
+        let first = 0;
+        let last = srcArray.length - 1;
+        while (first < last) {
+            let b = srcArray[first];
+            srcArray[first] = srcArray[last];
+            srcArray[last] = b;
+            first++;
+            last--;
+        }
+    }
+
+    function createArray(newArr) {
+        let arr2 = [];
+        for (let j = 0; j < newArr.length; j++) {
+            if (j % 2 != 0){
+                reverseArray(newArr[j]);
+            }
+            for (let k = 0; k < newArr[j].length; k++) {
+                arr2.push(newArr[j][k]);
+            }
+        }
+        return arr2;
+    }
+    let result = createArray(arr2D);
+    // console.log("mảng 2 chiều đầu vào là: a = "+ "[" + arr2D + "]");
+    document.writeln("gồm có: " + m + " phần tử ngẫu nhiên ; ");
+    document.writeln("mảng đầu ra là: b = " + "["+ result + "]");
+</script>
+</body>
+</html>
