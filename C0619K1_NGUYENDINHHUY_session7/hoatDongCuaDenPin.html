@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clean code</title>
+</head>
+<body>
+<script>
+    let myDate = function(day, month, year) {
+
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        this.setDay = function(day) {
+            this.day = day;
+        }
+
+        this.setMonth = function(month) {
+            this.month = month;
+        }
+
+        this.setYear = function(year) {
+            this.year = year;
+        }
+    }
+
+    var date = new myDate(12,2,2019);
+    alert(date.day + "/" + date.month + "/" + date.year);
+    date.setDay(3);
+    date.setMonth(5);
+    alert(date.day + "/" + date.month + "/" + date.year);
+
+</script>
+</body>
+</html>

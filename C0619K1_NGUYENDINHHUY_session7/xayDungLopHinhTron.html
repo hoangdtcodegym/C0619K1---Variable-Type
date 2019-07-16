@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lop hinh tron</title>
+</head>
+<body>
+<script>
+        let enter = "<br>";
+        function Circle(radius) {
+        //thuoc tinh
+        this.radius = radius;
+        // phương thức
+        this.getRadius = getRadius;
+        this.getCircufence = getCircufence;
+        this.getArea = getArea;
+        this.setRadius = setRadius;
+       // tạo phương thức
+        function getRadius() {
+            return radius;
+        }
+        function getCircufence() {
+            return Math.PI*radius*2
+        }
+        function getArea() {
+            return Math.PI*radius*radius;
+        }
+        function setRadius() {
+            this.radius = radius;
+        }
+
+    }
+    let myCircle = new Circle(4);
+    let myRadius = myCircle.getRadius();
+    let myCircufence = myCircle.getCircufence();
+    let myArea = myCircle.getArea();
+    // document.write(myRadius + enter);
+    // document.write(myCircufence + enter);
+    // document.write(myArea + enter);
+        myCircle.setRadius(5);
+        document.write(myRadius + enter);
+        document.write(myCircufence + enter);
+        document.write(myArea + enter);
+    
+    
+    
+</script>
+</body>
+</html>
