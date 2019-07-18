@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mo ta hình chữ nhật</title>
+</head>
+<body>
+<script>
+    let enter = "<br>";
+    let Rectangle = function (length, width) {
+        //thuộc tính
+        this.length = length;
+        this.width = width;
+        //phương thức
+        this.setLength = function (length1) {
+            this.length = length1;
+        }
+        
+        this.setWidth = function (width1) {
+            this.width = width1;
+        }
+        
+        // this.getLength = function () {
+        //     return this.length;
+        // }
+        //
+        // this.getwidth = function () {
+        //     return this.width;
+        // }
+        
+        this.getPerimeter = function () {
+            return (this.length + this.width)*2;
+        }
+
+        this.getArea = function () {
+            return (this.length*this.width);
+        }
+
+    }
+    let myRec = new Rectangle(30,8);
+    document.write(myRec.length + enter);
+    document.write(myRec.width + enter);
+    myRec.setLength(10);
+    myRec.setWidth(6);
+    document.write(myRec.getPerimeter() + enter);
+    document.write(myRec.getArea() + enter);
+
+</script>
+</body>
+</html>
