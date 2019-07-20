@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hien thi so ngay trong thang</title>
+</head>
+<body>
+<form>
+    <label style="color:">Month</label>
+    <input type="number" id="input" placeholder="your's month">
+    <button type="button" onclick="dayOfMonth()">Day number</button><br><br>
+    Equal: <span id="equal"></span>
+</form>
+
+<script>
+    function dayOfMonth() {
+        let month = parseInt(input.value);
+        let result;
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                result = 31;
+                break;
+            case 2:
+                result = 28;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                result = 30;
+                break;
+            default: result = "your's month";
+        }document.getElementById("equal").innerHTML = result;
+
+    }
+</script>
+</body>
+</html>
