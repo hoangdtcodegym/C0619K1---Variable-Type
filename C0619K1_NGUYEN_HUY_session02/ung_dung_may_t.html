@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ung dung may tinh</title>
+
+</head>
+<body>
+<form>
+    <table border="1">
+
+        <tr>
+            <td>
+                <label style="color:green" >Numberone</label>
+                <input type="number" id = "num1" placeholder="your's numberone">
+            </td>
+
+            <td>
+                <label style="color:red" >Numbertwo</label>
+                <input type="number" id="num2" placeholder="your's numbertwo" >
+
+            </td>
+        </tr>
+
+    </table>
+            <tr>
+                <td>
+                    <button type="button" onclick="addt()" >addition(+)</button>
+                </td>
+                <td>
+                    <button type="button" onclick="subt()" >subtraction(-)</button>
+                </td>
+                <td>
+                    <button type="button" onclick="multi()">multpilition(*) </button>
+                </td>
+                <td>
+                    <button type="button" onclick="div()">device(/) </button>
+                </td>
+
+            </tr>
+    <table
+</form>
+<span id='ketqua'></span>
+
+<script>
+function addt() {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let result = num1 + num2;
+    document.getElementById("ketqua").innerHTML = "equal: " + result;
+
+
+}
+function subt() {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let result = num1 - num2;
+    document.getElementById("ketqua").innerHTML = "equal: " + result;
+
+
+}
+function multi() {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let result = num1 * num2;
+    document.getElementById("ketqua").innerHTML = "equal: " + result;
+}
+
+function div() {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let result = num1 / num2;
+    document.getElementById("ketqua").innerHTML = "equal: " + result;
+}
+
+</script>
+</body>
+</html>
