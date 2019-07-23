@@ -3,139 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <title>xo so mien bac</title>
+    <p><h1><b>CHÀO MỪNG BẠN ĐẾN VỚI WEB <i style="color: red"><u>LÀM GIÀU KHÔNG KHÓ</u></i> :))</b></h1></p>
 </head>
 <body marginheight="100" marginwidth="100">
+
+    <label>Players:</label>
+    <input id="ticket" placeholder="enter a serial 5 number"><br><br>
+
+    <audio autoplay="1" controls="controls" loop="5">
+        <source src="./xsmb.mp3">
+    </audio>
+
 <form>
-
-    <table border="1px" cellpadding="10" cellspacing="0">
+    <table border="1px" cellpadding="10" cellspacing="0" class="table table-bordered">
         <tr>
-            <td colspan="7">
-                <label style="color: green"><b> XỔ SỐ MIỀN BẮC - XSMB</b></label>
-            </td>
+            <th colspan="2">
+                <h1><label style="color: green"><b>XSMB</b></label></h1>
+            </th>
         </tr>
 
         <tr>
-            <td style="color: red"><b> GIẢI ĐẶC BIỆT</b></td>
-            <td colspan="6"><span id="num01"></span></td>
+            <td style="color: red"><b>NUMBER_SPECIAL</b></td>
+            <td width="500"><span id="num0"></span></td>
 
         </tr>
 
         <tr>
-            <td><b> GIẢI NHẤT</b></td>
-            <td colspan="6"><span id="num11"></span></td>
+            <td><b> NUMBER_ONE</b></td>
+            <td><span id="num1"></span></td>
         </tr>
 
         <tr>
-            <td><b> GIẢI NHÌ</b></td>
-            <td colspan="3"><span id="num21"></span></td>
-            <td colspan="3"><span id="num22"></span></td>
+            <td><b>NUMBER_TWO</b></td>
+            <td><span id="num2"></span></td>
         </tr>
 
         <tr>
-            <td><b> GIẢI BA</b></td>
-            <td><span id="num31"></span></td>
-            <td><span id="num32"></span></td>
-            <td><span id="num33"></span></td>
-            <td><span id="num34"></span></td>
-            <td><span id="num35"></span></td>
-            <td><span id="num36"></span></td>
+            <td><b>NUMBER_THREE</b></td>
+            <td><span id="num3"></span></td>
         </tr>
 
         <tr>
-            <td><b> GIẢI TƯ</b></td>
-            <span colspan="2"><span id="num41" ></span>
+            <td><b>NUMBER_FOUR</b></td>
+            <td><span id="num4"></span></td>
         </tr>
 
         <tr>
-            <td><b> GIẢI NĂM</b></td>
-            <td colspan="2"><span id="num51" ></span></td>
+            <td><b>NUMBER_FIVE</b></td>
+            <td><span id="num5"></span></td>
         </tr>
 
         <tr>
-            <td><b> GIẢI SÁU</b></td>
-            <td colspan="2"><span id="num61" ></span></td>
+            <td><b>NUMBER_SIX</b></td>
+            <td><span id="num6"></span></td>
         </tr>
 
         <tr>
-            <td><b> GIẢI BẢY</b></td>
-            <td colspan="2"><span id="num71" ></span></td>
+            <td><b>NUMBER_SEVEN</b></td>
+            <td><span id="num7"></span></td>
         </tr>
     </table>
 </form>
-    <video autoplay="true" controls="controls" loop="5" width="300" height="300"><source src="./xsmb.mp4" type="video/mp4"></video>
-    <script>
-        function giaiDB() {
-           let arr0 = Array(5).fill().map(function () {return Math.floor(Math.random()*10)
-            });
-            document.getElementById("num0").innerHTML = document.write(arr0);
 
+    <br><br>
+    <button type="button" onclick="Roll()">Start</button>
+    <br><br>
+
+
+<br>
+<br>
+
+<button type="button" onclick="inform()">showResult</button><br><br>
+<h1><span style="color: red; border: 1px" id="kq"></span></h1>
+
+<script>
+
+    function getRandom() {
+        return Math.floor(Math.random() * 100000);
+    }
+
+    let num = {};
+
+    function Roll() {
+        for (let i = 0; i < 8; i++) {
+            num[i] = getRandom();
+            document.getElementById("num" + i).innerHTML = showNumber(num[i]);
         }
-        
+    }
 
-        function getResult(number) {
-            let arr = [];
-            for(let i = 0; i< number;i++){
-                let result = Math.floor(Math.random()*100);
-                arr.push(result);
+    function showNumber(n) {
+        let s = {0:'0000',1:'000',2:'00',3:'0',4:''};
+        for (let i = 1; i <= 5; i ++) {
+            if (n.toString().length == i) {
+                return s[i - 1] + n;
             }
-            return arr;
         }
-        let numberOfXS = [1,1,2,6,4,6,3,4];
-        
-        function roll(index) {
-            let result = [];
-            switch (index) {
-                case 0:
-                    result.push(getResult(numberOfXS[0]));
-                    break;
-                case 1:
-                    result.push(getResult(numberOfXS[1]));
-                    break;
-                case 2:
-                    result.push(getResult(numberOfXS[2]));
-                    break;
-                case 3:
-                    result.push(getResult(numberOfXS[3]));
-                    break;
-                case 4:
-                    result.push(getResult(numberOfXS[4]));
-                    break;
-                case 5:
-                    result.push(getResult(numberOfXS[5]));
-                    break;
-                case 6:
-                    result.push(getResult(numberOfXS[6]));
-                    break;
-                case 7:
-                    result.push(getResult(numberOfXS[7]));
-                    break;
-                default:
-                    result.push(getResult(numberOfXS[0]));
-                    break;
+    }
 
-            }
-            return result;
+
+    function inform() {
+        let number = document.getElementById('ticket').value;
+        let result = "";
+        switch (parseInt(number)) {
+            case num[0]:
+                result = "Bạn trúng giải đặc biệt, bạn là tỷ phú :))";
+                break;
+            case num[1]:
+                result = "Bạn trúng giải nhất, bạn là triệu phú :))";
+                break;
+            case num[2]:
+                result = "Bạn trúng giải 02, tuyệt vời :))";
+                break;
+            case num[3]:
+                result = "Bạn trúng giải 03, chúc mừng bạn :))";
+                break;
+            case num[4]:
+                result = "Bạn trúng giải 04, chúc mừng :))";
+                break;
+            case num[5]:
+                result = "Bạn trúng giải 05, hehe :))";
+                break;
+            case num[6]:
+                result = "Bạn trúng giải 06, hihi :))";
+                break;
+            case num[7]:
+                result = "Bạn trúng giải 07, cố gắng lần nữa nhé";
+                break;
+            default:
+                result = "Đen thôi đỏ quên đi, chúc bạn may mắn lần sau.";
+                break;
         }
+         document.getElementById("kq").innerHTML =  result;
+    }
+</script>
 
-        
-        function QuaySoXo(index) {
-            let kq = [];
-            for (let i = 0;i<=index;i++){
-                kq.push(roll(i));
-                console.log(kq[i]);
-            }
-
-            //hien thi
-            for (let i=0;i<kq.length;i++){
-                for (let j = 1;j<=kq[i].length;j++) {
-                    let display = document.getElementById("num"+i+j);
-                    console.log(kq[i][j-1]);
-                    display.innerHTML = kq[i][j-1];
-                }
-            } 
-        }
-
-        QuaySoXo(7);
-    </script>
 </body>
 </html>
