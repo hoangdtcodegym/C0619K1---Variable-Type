@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xo so mien bac</title>
+</head>
+<body marginheight="100" marginwidth="100">
+<form>
+
+    <table border="1px" cellpadding="10" cellspacing="0">
+        <tr>
+            <td colspan="7">
+                <label style="color: green"><b> XỔ SỐ MIỀN BẮC - XSMB</b></label>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="color: red"><b> GIẢI ĐẶC BIỆT</b></td>
+            <td colspan="6"><span id="num01"></span></td>
+
+        </tr>
+
+        <tr>
+            <td><b> GIẢI NHẤT</b></td>
+            <td colspan="6"><span id="num11"></span></td>
+        </tr>
+
+        <tr>
+            <td><b> GIẢI NHÌ</b></td>
+            <td colspan="3"><span id="num21"></span></td>
+            <td colspan="3"><span id="num22"></span></td>
+        </tr>
+
+        <tr>
+            <td><b> GIẢI BA</b></td>
+            <td><span id="num31"></span></td>
+            <td><span id="num32"></span></td>
+            <td><span id="num33"></span></td>
+            <td><span id="num34"></span></td>
+            <td><span id="num35"></span></td>
+            <td><span id="num36"></span></td>
+        </tr>
+
+        <tr>
+            <td><b> GIẢI TƯ</b></td>
+            <span colspan="2"><span id="num41" ></span>
+        </tr>
+
+        <tr>
+            <td><b> GIẢI NĂM</b></td>
+            <td colspan="2"><span id="num51" ></span></td>
+        </tr>
+
+        <tr>
+            <td><b> GIẢI SÁU</b></td>
+            <td colspan="2"><span id="num61" ></span></td>
+        </tr>
+
+        <tr>
+            <td><b> GIẢI BẢY</b></td>
+            <td colspan="2"><span id="num71" ></span></td>
+        </tr>
+    </table>
+</form>
+    <video autoplay="true" controls="controls" loop="5" width="300" height="300"><source src="./xsmb.mp4" type="video/mp4"></video>
+    <script>
+        function giaiDB() {
+           let arr0 = Array(5).fill().map(function () {return Math.floor(Math.random()*10)
+            });
+            document.getElementById("num0").innerHTML = document.write(arr0);
+
+        }
+        
+
+        function getResult(number) {
+            let arr = [];
+            for(let i = 0; i< number;i++){
+                let result = Math.floor(Math.random()*100);
+                arr.push(result);
+            }
+            return arr;
+        }
+        let numberOfXS = [1,1,2,6,4,6,3,4];
+        
+        function roll(index) {
+            let result = [];
+            switch (index) {
+                case 0:
+                    result.push(getResult(numberOfXS[0]));
+                    break;
+                case 1:
+                    result.push(getResult(numberOfXS[1]));
+                    break;
+                case 2:
+                    result.push(getResult(numberOfXS[2]));
+                    break;
+                case 3:
+                    result.push(getResult(numberOfXS[3]));
+                    break;
+                case 4:
+                    result.push(getResult(numberOfXS[4]));
+                    break;
+                case 5:
+                    result.push(getResult(numberOfXS[5]));
+                    break;
+                case 6:
+                    result.push(getResult(numberOfXS[6]));
+                    break;
+                case 7:
+                    result.push(getResult(numberOfXS[7]));
+                    break;
+                default:
+                    result.push(getResult(numberOfXS[0]));
+                    break;
+
+            }
+            return result;
+        }
+
+        
+        function QuaySoXo(index) {
+            let kq = [];
+            for (let i = 0;i<=index;i++){
+                kq.push(roll(i));
+                console.log(kq[i]);
+            }
+
+            //hien thi
+            for (let i=0;i<kq.length;i++){
+                for (let j = 1;j<=kq[i].length;j++) {
+                    let display = document.getElementById("num"+i+j);
+                    console.log(kq[i][j-1]);
+                    display.innerHTML = kq[i][j-1];
+                }
+            } 
+        }
+
+        QuaySoXo(7);
+    </script>
+</body>
+</html>
