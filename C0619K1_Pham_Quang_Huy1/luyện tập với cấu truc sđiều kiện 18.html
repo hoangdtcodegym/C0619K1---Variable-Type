@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập với cấu trúc điều kiện </title>
+</head>
+<body>
+<script>
+    let t = parseInt(prompt("nhập số tiền thu nhập (tính theo triệu) :"));
+    if (t>=1000){
+        alert("số thuế phải nộp :" + 20*t/100 + "triệu"+" VNĐ")
+    }else if (t>=500){
+        alert("số thuế phải nộp :" + 10*t/100 + "triệu "+"VNĐ")
+    }else if (t>=100){
+        alert("số thuế phải nộp :" + 5*t/100 + "triệu"+" VNĐ")
+    }else if (t>=50){
+        alert("số thuế phải nộp :" + 2*t/100 + " triệu"+" VNĐ")
+    }else if (t>=0){
+        alert("không phải nộp thuế")
+    }
+</script>
+</body>
+</html>

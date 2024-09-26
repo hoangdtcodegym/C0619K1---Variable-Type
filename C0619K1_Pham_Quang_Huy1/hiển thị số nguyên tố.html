@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiển thị số nguyên tố</title>
+</head>
+<body>
+<script>
+    let num= parseInt(prompt("nhập số lượng số nguyên tố cần tìm:"));
+    let count = 0;
+    let i = 2;
+    while (count < num) {
+        let dem = 0;
+        for (let j = 2; j <=Math.sqrt(i); j++) {
+            if (i % j == 0) {
+                dem += 1;
+            }
+        }
+        if (dem == 0) {
+            document.write(" " + i );
+            count += 1;
+        }
+        i++;
+    }
+</script>
+</body>
+</html>

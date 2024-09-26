@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập với cấu trúc điều kiện </title>
+</head>
+<body>
+<script>
+    let d = parseInt(prompt("nhập số đếm công tơ điện "))
+    if (d>=50){
+        alert("số tiền điện :"+ (d * 1000)+ "VNĐ")
+    } else if (d>=30) {
+        alert("số tiền điện :" + (d * 800) +"VNĐ")
+    } else if (d>=10){
+        alert("số tiền điện :" + (d * 500) +"VNĐ")
+    }else if(d>=5){
+        alert("số tiền điện :" + (d * 200 ) +"VNĐ")
+    }else if (d>0&&d<5){
+        alert("số tiền điện :" + (d * 100) +"VNĐ")
+    }else  if (d==0){
+        alert("số tiền điện : 0 VNĐ ")
+    }
+</script>
+</body>
+</html>
