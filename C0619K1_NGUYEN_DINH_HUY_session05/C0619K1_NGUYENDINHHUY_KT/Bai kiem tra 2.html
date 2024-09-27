@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = Math.floor(Math.random()*10);
+    let arr = Array(m).fill().map(function (){return Math.floor(Math.random()*20)} );
+    document.write("mảng đầu vào ngẫu nhiên là a: = " + "[" + arr + "]"+ "<br/>");
+    function isPrime(n) {
+        let snt=true;
+        if (n < 2)
+            snt = false;
+        else{
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    snt = false;
+                    break;
+                }
+            }
+        }
+        return snt;
+    }
+   function listPrime(array) {
+       let b = [];
+       for (let j = 0; j < array.length; j++) {
+           if (isPrime(array[j]) == true) {
+               b.push(array[j])
+           }
+       }return b;
+   }
+   document.write("mảng số nguyên tố là: b = " + "[" + listPrime(arr) + "]");
+</script>
+</body>
+</html>

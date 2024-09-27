@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liet ke so nguyen to</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập vào số nguyên:");
+    function isPrime(n) {
+        let snt = true;
+        if (n < 2)
+            snt = false;
+        else if (n == 2)
+            snt = true;
+        else{
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    snt = false;
+                    break;
+                }
+            }
+        }
+        return snt;
+    }
+    for (let j =0; j<=a; j++){
+        if (isPrime(j) == true) {
+            document.write(j + ";&nbsp");
+        }
+    }
+</script>
+</body>
+</html>

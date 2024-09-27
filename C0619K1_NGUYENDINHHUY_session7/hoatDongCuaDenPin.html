@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>den pin</title>
+</head>
+<body>
+<script>
+    let Battery = function () {
+        //thuộc tính
+
+
+        //phương thức
+        this.setEnergy = function (energy) {
+            this.energy = energy;
+        }
+
+        this.getEnergy = function(){
+            return energy;
+        }
+
+        this.setDecreaseEnergy = function () {
+            if (this.energy > 0) {
+                this.energy--;
+            }
+        }
+    }
+    let Flashlamp = function () {
+        //phương thức
+        this.setBattery = function (battery) {
+            this.battery = battery;
+        }
+
+        this.getBatteryinfo = function () {
+            return this.Battery.getEnergy()
+        }
+
+        this.turnOn = function () {
+            this.status = true;
+        }
+
+        this.turnOff = function () {
+            this.status = false;
+        }
+
+        this.light = function () {
+            if (this.status == true) {
+                alert("Lighting");
+            } else {
+                alert("No lighting")
+            }
+        }
+
+    }
+
+    let battery = new Battery();
+    battery.setEnergy(100);
+
+    let flashlamp = new Flashlamp();
+    flashlamp.setBattery(battery);
+
+    document.write("turn on" + "<br>");
+    flashlamp.turnOn();
+    flashlamp.light();
+    document.write("thông tin pin" + flashlamp.getBatteryinfo() + "<br>");
+
+    document.write("turn off");
+    flashlamp.turnOff();
+    flashlamp.light();
+
+</script>
+</body>
+</html>

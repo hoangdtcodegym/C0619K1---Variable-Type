@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xo so mien bac</title>
+    <p><h1><b>CHÀO MỪNG BẠN ĐẾN VỚI WEB <i style="color: red"><u>LÀM GIÀU KHÔNG KHÓ</u></i> :))</b></h1></p>
+</head>
+<body marginheight="100" marginwidth="100">
+
+    <label>Players:</label>
+    <input id="ticket" placeholder="enter a serial 5 number"><br><br>
+
+    <audio autoplay="1" controls="controls" loop="5">
+        <source src="./xsmb.mp3">
+    </audio>
+
+<form>
+    <table border="1px" cellpadding="10" cellspacing="0" class="table table-bordered">
+        <tr>
+            <th colspan="2">
+                <h1><label style="color: green"><b>XSMB</b></label></h1>
+            </th>
+        </tr>
+
+        <tr>
+            <td style="color: red"><b>NUMBER_SPECIAL</b></td>
+            <td width="500"><span id="num0"></span></td>
+
+        </tr>
+
+        <tr>
+            <td><b> NUMBER_ONE</b></td>
+            <td><span id="num1"></span></td>
+        </tr>
+
+        <tr>
+            <td><b>NUMBER_TWO</b></td>
+            <td><span id="num2"></span></td>
+        </tr>
+
+        <tr>
+            <td><b>NUMBER_THREE</b></td>
+            <td><span id="num3"></span></td>
+        </tr>
+
+        <tr>
+            <td><b>NUMBER_FOUR</b></td>
+            <td><span id="num4"></span></td>
+        </tr>
+
+        <tr>
+            <td><b>NUMBER_FIVE</b></td>
+            <td><span id="num5"></span></td>
+        </tr>
+
+        <tr>
+            <td><b>NUMBER_SIX</b></td>
+            <td><span id="num6"></span></td>
+        </tr>
+
+        <tr>
+            <td><b>NUMBER_SEVEN</b></td>
+            <td><span id="num7"></span></td>
+        </tr>
+    </table>
+</form>
+
+    <br><br>
+    <button type="button" onclick="Roll()">Start</button>
+    <br><br>
+
+
+<br>
+<br>
+
+<button type="button" onclick="inform()">showResult</button><br><br>
+<h1><span style="color: red; border: 1px" id="kq"></span></h1>
+
+<script>
+
+    function getRandom() {
+        return Math.floor(Math.random() * 100000);
+    }
+
+    let num = {};
+
+    function Roll() {
+        for (let i = 0; i < 8; i++) {
+            num[i] = getRandom();
+            document.getElementById("num" + i).innerHTML = showNumber(num[i]);
+        }
+    }
+
+    function showNumber(n) {
+        let s = {0:'0000',1:'000',2:'00',3:'0',4:''};
+        for (let i = 1; i <= 5; i ++) {
+            if (n.toString().length == i) {
+                return s[i - 1] + n;
+            }
+        }
+    }
+
+
+    function inform() {
+        let number = document.getElementById('ticket').value;
+        let result = "";
+        switch (parseInt(number)) {
+            case num[0]:
+                result = "Bạn trúng giải đặc biệt, bạn là tỷ phú :))";
+                break;
+            case num[1]:
+                result = "Bạn trúng giải nhất, bạn là triệu phú :))";
+                break;
+            case num[2]:
+                result = "Bạn trúng giải 02, tuyệt vời :))";
+                break;
+            case num[3]:
+                result = "Bạn trúng giải 03, chúc mừng bạn :))";
+                break;
+            case num[4]:
+                result = "Bạn trúng giải 04, chúc mừng :))";
+                break;
+            case num[5]:
+                result = "Bạn trúng giải 05, hehe :))";
+                break;
+            case num[6]:
+                result = "Bạn trúng giải 06, hihi :))";
+                break;
+            case num[7]:
+                result = "Bạn trúng giải 07, cố gắng lần nữa nhé";
+                break;
+            default:
+                result = "Đen thôi đỏ quên đi, chúc bạn may mắn lần sau.";
+                break;
+        }
+         document.getElementById("kq").innerHTML =  result;
+    }
+</script>
+
+</body>
+</html>

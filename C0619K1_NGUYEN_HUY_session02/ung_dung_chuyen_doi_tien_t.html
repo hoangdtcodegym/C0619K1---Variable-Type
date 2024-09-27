@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi tien te</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td>
+                <b style="color: blue">Amount</b> <br>
+                <input type="number" id="num1" placeholder="your's money">
+            </td>
+            
+            <td>
+                <b style="color: green">From currency</b> <br>
+                <select id="from">
+                    <option>USD</option>
+                    <option>VND</option>
+                </select>
+            </td>
+            
+            <td>
+                <b style="color: green">To currency</b> <br>
+                <select id="to">
+                    <option>USD</option>
+                    <option>VND</option>
+                </select>
+            </td>
+            
+            <td>
+                <button type="button" onclick="convert()" >Convert</button>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <b style="color: red">Equal</b>
+                <span id="equal" class="price-new"></span>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<script>
+    function convert() {
+        let amount = document.getElementById("num1").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let result = 0;
+        if(from == "USD"){
+            to = "VND";
+            result = amount*23000;
+        };
+        else {
+            to = "USD";
+            result = amount/23000;
+        };
+        document.getElementById("equal").innerHTML = result;
+    }
+</script>
+
+</body>
+</html>
